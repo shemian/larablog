@@ -43,10 +43,28 @@
 
         <div class="container">
             <h2>Top Blogs</h2>
-            @foreach($listBlogs as $listBlog)
-            <p>this: {{$listBlog->content}}</p>
-            @endforeach
         </div>
+
+        <section>
+            <div class="container">
+
+                <div class="row">
+                    @foreach($listBlogs as $listBlog)
+                    <div class="col-sm-4" style="padding:2px">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">{{$listBlog->title}}</h5>
+                                <p class="card-text">{{$listBlog->content}}</p>
+                                <a href="#" class="btn btn-primary">Author-- {{$listBlog->author}}</a>
+                            </div>
+                        </div>
+                    </div>
+                    @endforeach
+                </div>
+            </div>
+        </section>
+        <br>
+        <br>
         
         <div class="container">
             <h2 class="top">Create new Blog</h2>
